@@ -1,0 +1,101 @@
+/* HeroSection.css */
+
+.hero-bg {
+    animation: backgroundChange 20s infinite ease-in-out;
+    background-size: cover;
+    background-position: center;
+    /* position: relative; */
+  }
+  
+  @keyframes backgroundChange {
+    0% {
+      background-image: url("https://ik.imagekit.io/6oa6qejxe/777.jpg?updatedAt=1725874226371");
+      background-size: 100%;
+      opacity: 1;
+    }
+    25% {
+      background-image: url("https://ik.imagekit.io/6oa6qejxe/medium-shot-happy-family-airport.jpg?updatedAt=1725879679852");
+      background-size: 105%;
+      opacity: 0.8;
+    }
+    33% {
+      background-image: url("https://ik.imagekit.io/6oa6qejxe/2151747484.jpg?updatedAt=1725880923611");
+      background-size: 100%;
+      opacity: 1;
+    }
+    58% {
+      background-size: 105%;
+      opacity: 0.8;
+    }
+    66% {
+      background-image: url("https://ik.imagekit.io/6oa6qejxe/2151037314.jpg?updatedAt=1725881564922");
+      background-size: 100%;
+      opacity: 1;
+    }
+    91% {
+      background-size: 105%;
+      opacity: 0.8;
+    }
+    100% {
+      background-image: url("https://ik.imagekit.io/6oa6qejxe/travel-concept-with-landmarks.jpg?updatedAt=1725881287039");
+      background-size: 100%;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-bg {
+      height: 80vh; /* Adjust as needed */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .hero-bg {
+      height: 50vh; /* Full viewport height */
+    }
+  }
+  /* HeroSection.css */
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire section */
+  z-index: -1; /* Make sure the video is behind all other content */
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+  /* Ensure video covers the screen */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Ensure the video container is positioned correctly */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

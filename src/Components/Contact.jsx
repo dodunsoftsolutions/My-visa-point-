@@ -59,7 +59,7 @@ const ContactUs = () => {
             Reach out to us for any inquiries regarding visa and immigration services. We are here to assist you with
             all the information and support you need for a smooth and successful application process.
           </p>
-          <p className="font-semibold mb-2">SCO-2433-34, 2nd Floor, Sector 22c</p>
+          <p className="font-semibold mb-2">SCO-2433-34, 2nd Floor, Sector 22C</p>
           <p className="font-semibold">Chandigarh, 160022</p>
         </div>
 

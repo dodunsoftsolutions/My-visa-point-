@@ -41,7 +41,7 @@ const UniversitySection = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsPerSlide, setItemsPerSlide] = useState(4);
+  const [itemsPerSlide, setItemsPerSlide] = useState(3);
 
   // Automatically transition every 3 seconds
   useEffect(() => {
@@ -63,9 +63,10 @@ const UniversitySection = () => {
         setItemsPerSlide(2); // Show 2 logos per slide on small screens (phones)
       } else if (window.innerWidth < 1024) {
         setItemsPerSlide(3); // Show 3 logos on tablets or small laptops
-      } else {
-        setItemsPerSlide(4); // Show 4 logos per slide on large screens (laptops and desktops)
       }
+      // } else {
+      //   setItemsPerSlide(3); // Show 4 logos per slide on large screens (laptops and desktops)
+      // }
     };
 
     handleResize(); // Call it initially to set itemsPerSlide on load

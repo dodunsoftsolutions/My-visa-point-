@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
+  const dropdownRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,7 +14,24 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+  const handleClickOutside = (event) => {
+    // Check if the click is outside the dropdown
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+  useEffect(() => {
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
 
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
   // Check if the current route is the Home page for internal links
   const isHomePage = location.pathname === "/";
 
@@ -23,7 +41,7 @@ const Navbar = () => {
       <div className="bg-teal-800 text-gray-100 py-2 px-6 flex justify-between items-center text-sm hidden md:flex fixed top-0 w-full z-50">
         <div className="flex items-center space-x-4">
           <i className="fas fa-map-marker-alt"></i>
-          <span>SCO-2433-34, 2nd Floor, Sector 22c Chandigarh, 160022</span>
+          <span>SCO-2433-34, 2nd Floor, Sector 22C Chandigarh, 160022</span>
         </div>
         <div className="flex space-x-4">
           <a
@@ -74,22 +92,22 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6"  ref={dropdownRef}>
           {isHomePage ? (
-              <a href="#hero" className="hover:text-teal-600 transition-colors">
+              <a href="#hero" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 Home
               </a>
             ) : (
-              <Link to="/#hero" className="hover:text-teal-600 transition-colors">
+              <Link to="/#hero" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 Home
               </Link>
             )}
             {isHomePage ? (
-              <a href="#about" className="hover:text-teal-600 transition-colors">
+              <a href="#about" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 About
               </a>
             ) : (
-              <Link to="/#about" className="hover:text-teal-600 transition-colors">
+              <Link to="/#about" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 About
               </Link>
             )}
@@ -117,11 +135,11 @@ const Navbar = () => {
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 bg-white border rounded-lg shadow-lg w-48 z-50">
                   <Link
-                    to="/spouse-visa"
+                    to="/super-visa"
                     className="block px-4 py-2 hover:bg-teal-100"
                     onClick={() => setIsDropdownOpen(false)}
                   >
-                    Spouse Visa
+                    Super Visa
                   </Link>
                   <Link
                     to="/study-visa"
@@ -131,11 +149,11 @@ const Navbar = () => {
                     Study Visa
                   </Link>
                   <Link
-                    to="/top-up-visa"
+                    to="/visa-Counselling"
                     className="block px-4 py-2 hover:bg-teal-100"
                     onClick={() => setIsDropdownOpen(false)}
                   >
-                    Top-Up Visa
+                    Visa Counselling
                   </Link>
                   <Link
                     to="/tourist-visa"
@@ -144,13 +162,28 @@ const Navbar = () => {
                   >
                     Tourist Visa
                   </Link>
+                  <Link
+                    to="/IeltsPte"
+                    className="block px-4 py-2 hover:bg-teal-100"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    IELTS/PTE
+                  </Link>
+                  <Link
+                    to="/Interview"
+                    className="block px-4 py-2 hover:bg-teal-100"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    Interview Preparation
+                  </Link>
                 </div>
               )}
             </div>
             {isHomePage ? (
               <a
                 href="#testimonials"
-                className="hover:text-teal-600 transition-colors"
+                className="hover:text-teal-600 transition-colors "
+                onClick={() => setIsDropdownOpen(false)}
               >
                 Testimonials
               </a>
@@ -158,16 +191,17 @@ const Navbar = () => {
               <Link
                 to="/#testimonials"
                 className="hover:text-teal-600 transition-colors"
+                onClick={() => setIsDropdownOpen(false)}
               >
                 Testimonials
               </Link>
             )}
             {isHomePage ? (
-              <a href="#contact" className="hover:text-teal-600 transition-colors">
+              <a href="#contact" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 Contact
               </a>
             ) : (
-              <Link to="/#contact" className="hover:text-teal-600 transition-colors">
+              <Link to="/#contact" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 Contact
               </Link>
             )}
@@ -244,34 +278,34 @@ const Navbar = () => {
             {isDropdownOpen && (
               <div className="absolute right-0 bg-gray-100 w-full z-50">
                 <Link
-                  to="/spouse-visa"
+                  to="/super-visa"
                   className="block px-4 py-2 hover:bg-teal-100"
                   onClick={() => {
                     setIsDropdownOpen(false);
                     setIsMenuOpen(false);
                   }}
                 >
-                  Spouse Visa
+                  Super Visa
                 </Link>
                 <Link
-                  to="/study-visa"
+                  to="/student-visa"
                   className="block px-4 py-2 hover:bg-teal-100"
                   onClick={() => {
                     setIsDropdownOpen(false);
                     setIsMenuOpen(false);
                   }}
                 >
-                  Study Visa
+                  Student Visa
                 </Link>
                 <Link
-                  to="/top-up-visa"
+                  to="/visa-Counselling"
                   className="block px-4 py-2 hover:bg-teal-100"
                   onClick={() => {
                     setIsDropdownOpen(false);
                     setIsMenuOpen(false);
                   }}
                 >
-                  Top-Up Visa
+                   Visa Counselling
                 </Link>
                 <Link
                   to="/tourist-visa"

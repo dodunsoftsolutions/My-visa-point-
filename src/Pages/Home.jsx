@@ -8,6 +8,7 @@ import ContactUs from '../Components/Contact';
 import Testimonials from '../Components/Testimonials';
 import StatsSection from '../Components/StatsSection';
 import UniversitySection from '../Components/UniversitySection';
+import ApprovedVisas from '../Components/ApprovedVisas';
 
 const Home = () => {
   return (
@@ -34,8 +35,10 @@ const Home = () => {
       <section id="contact">
         <ContactUs />
       </section>
+      <ApprovedVisas/>
       <StatsSection/>
       <UniversitySection/>
+   
     </div>
   );
 };

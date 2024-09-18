@@ -119,7 +119,7 @@ const Footer = () => {
             </h3>
             <ul>
               <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/study-visa" className="relative group">
+                <Link to="/student-visa" className="relative group">
                   Study Visa
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
                 </Link>
@@ -131,14 +131,27 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/spouse-visa" className="relative group">
-                  Spouse Visa
+                <Link to="/super-visa" className="relative group">
+                  Super Visa
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
                 </Link>
               </li>
               <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/top-up-visa" className="relative group">
-                  Top up Visa
+                <Link to="/visa-Counselling" className="relative group">
+                   Visa Counselling
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
+                </Link>
+
+              </li>
+              <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
+                <Link to="/IeltsPte" className="relative group">
+                   IELTS/PTE
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
+                </Link>
+              </li>
+              <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
+                <Link to="/Interview" className="relative group">
+                   Interview Preparation
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
                 </Link>
               </li>

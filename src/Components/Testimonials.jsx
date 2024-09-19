@@ -80,41 +80,41 @@ const Testimonials = () => {
           {/* Step 1 */}
           <Step
             icon="fa-user-check"
-            title="Jaspreet Singh"
+            title="Ramanpreet Kaur"
             description="The service was exceptional! The process was smooth and hassle-free. Highly recommended!"
-            imgSrc="https://ik.imagekit.io/6oa6qejxe/WhatsApp%20Image%202024-09-06%20at%203.16.29%20PM.png?updatedAt=1725618867883"
+            imgSrc="https://ik.imagekit.io/tdlebsr5e/WhatsApp%20Image%202024-09-19%20at%204.03.06%20PM.jpeg?updatedAt=1726743573781"
           />
           
           {/* Step 2 */}
           <Step
             icon="fa-user-check"
-            title="Neha Sharma"
+            title="Amandeep Kaur"
             description="Amazing experience from start to finish. The team was incredibly supportive and the results were perfect."
-            imgSrc="https://ik.imagekit.io/6oa6qejxe/WhatsApp%20Image%202024-09-06%20at%203.16.22%20PM.png?updatedAt=1725618856925"
+            imgSrc="https://ik.imagekit.io/tdlebsr5e/WhatsApp%20Image%202024-09-19%20at%204.03.00%20PM.jpeg?updatedAt=1726743573745"
           />
 
           {/* Step 3 */}
           <Step
             icon="fa-user-check"
-            title="Gurpreet Singh"
+            title="Manish"
             description="Professional and efficient service. They made sure I had everything I needed. Couldn't be happier!"
-            imgSrc="https://ik.imagekit.io/6oa6qejxe/WhatsApp%20Image%202024-09-06%20at%203.16.25%20PM.png?updatedAt=1725618844705"
+            imgSrc="https://ik.imagekit.io/tdlebsr5e/WhatsApp%20Image%202024-09-19%20at%204.03.09%20PM.jpeg?updatedAt=1726743545684"
           />
 
           {/* Step 4 */}
           <Step
             icon="fa-user-check"
-            title="Gurpreet Singh"
-            description="Professional and efficient service. They made sure I had everything I needed. Couldn't be happier!"
+            title="Harpreet Kaur"
+            description="Truly impressed with their dedication to service. Everything was taken care of perfectly!"
             imgSrc="https://ik.imagekit.io/tdlebsr5e/WhatsApp%20Image%202024-09-18%20at%202.31.04%20PM%20(2).jpeg?updatedAt=1726652993290"
           />
 
           {/* Step 5 */}
           <Step
             icon="fa-user-check"
-            title="Gurpreet Singh"
-            description="Professional and efficient service. They made sure I had everything I needed. Couldn't be happier!"
-            imgSrc="https://ik.imagekit.io/tdlebsr5e/WhatsApp%20Image%202024-09-18%20at%202.31.04%20PM.jpeg?updatedAt=1726653036869"
+            title="Harpreet Kaur"
+            description="From consultation to completion, their professionalism made this experience stress-free!"
+            imgSrc="https://ik.imagekit.io/tdlebsr5e/WhatsApp%20Image%202024-09-18%20at%202.31.04%20PM%20(1).jpeg?updatedAt=1726653017942"
           />
         </Slider>
       </div>

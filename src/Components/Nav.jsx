@@ -254,72 +254,23 @@ const Navbar = () => {
               About
             </Link>
           )}
-          <div className="relative">
-            <button
-              onClick={toggleDropdown}
-              className="block w-full text-left px-4 py-3 hover:bg-teal-100 transition-colors"
+           {isHomePage ? (
+            <a
+              href="#categories"
+              className="block px-4 py-3 hover:bg-teal-100 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Services
-              <svg
-                className="w-4 h-4 ml-1 inline"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {isDropdownOpen && (
-              <div className="absolute right-0 bg-gray-100 w-full z-50">
-                <Link
-                  to="/super-visa"
-                  className="block px-4 py-2 hover:bg-teal-100"
-                  onClick={() => {
-                    setIsDropdownOpen(false);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  Super Visa
-                </Link>
-                <Link
-                  to="/student-visa"
-                  className="block px-4 py-2 hover:bg-teal-100"
-                  onClick={() => {
-                    setIsDropdownOpen(false);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  Student Visa
-                </Link>
-                <Link
-                  to="/visa-Counselling"
-                  className="block px-4 py-2 hover:bg-teal-100"
-                  onClick={() => {
-                    setIsDropdownOpen(false);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                   Visa Counselling
-                </Link>
-                <Link
-                  to="/tourist-visa"
-                  className="block px-4 py-2 hover:bg-teal-100"
-                  onClick={() => {
-                    setIsDropdownOpen(false);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  Tourist Visa
-                </Link>
-              </div>
-            )}
-          </div>
+            </a>
+          ) : (
+            <Link
+              to="/#categories"
+              className="block px-4 py-3 hover:bg-teal-100 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Services
+            </Link>
+          )}
           {isHomePage ? (
             <a
               href="#testimonials"

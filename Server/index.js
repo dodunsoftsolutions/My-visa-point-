@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/contactDB', {
+mongoose.connect('mongodb://myvisapoint:myvisapoint123%23@13.200.188.144:27017/?authSource=myvisapoint', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

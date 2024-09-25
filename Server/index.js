@@ -23,7 +23,7 @@ mongoose.connect('mongodb://myvisapoint:myvisapoint123%23@13.200.188.144:27017/?
 app.use('/api/contact', contactRoutes);
 
 // Start the server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

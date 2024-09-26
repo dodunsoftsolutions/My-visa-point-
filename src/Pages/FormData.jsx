@@ -9,7 +9,7 @@ const FormData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3004/api/contact/all'); // Update this URL to match your backend route
+        const response = await axios.get('https://api.myvisapoint.com/api/contact/all'); // Update this URL to match your backend route
         setContacts(response.data.contacts);
       } catch (err) {
         setError('Failed to fetch data. Please try again.');

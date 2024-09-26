@@ -35,7 +35,7 @@ const HeroSection = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact/submit", {
+      const response = await fetch("http://localhost:3004/api/contact/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

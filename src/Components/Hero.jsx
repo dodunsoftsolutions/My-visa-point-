@@ -1,152 +1,54 @@
 import React, { useState, useEffect } from "react";
-import "./HeroSection.css"; // Make sure the CSS is correctly linked
-import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const navigate = useNavigate();
+  const images = [
+    "url('https://th.bing.com/th?id=OIP.CSU0WYkZwY4keDZCuzMsfQHaE5&w=307&h=203&c=8&rs=1&qlt=90&o=6&cb=13&dpr=1.3&pid=3.1&rm=2')",
+    "url('https://th.bing.com/th?id=OIP.SYVOsT6OjixJKyYsY6vKlgHaE6&w=306&h=203&c=8&rs=1&qlt=90&o=6&cb=13&dpr=1.3&pid=3.1&rm=2')",
+    "url('https://th.bing.com/th?id=OIP.iwCxQJfnA3agx4xYkYGA3wHaE8&w=305&h=204&c=8&rs=1&qlt=90&o=6&cb=13&dpr=1.3&pid=3.1&rm=2')"
+  ];
 
-  const handleContactClick = () => {
-    navigate("/#contact"); // Navigates to the /#contact section
-  };
+  const [currentImage, setCurrentImage] = useState(0);
+  const [fade, setFade] = useState(true); // For animation
 
-  // Update screen size dynamically
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    const interval = setInterval(() => {
+      setFade(false); // Start fade-out
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
+      setTimeout(() => {
+        setCurrentImage((prevImage) =>
+          prevImage === images.length - 1 ? 0 : prevImage + 1
+        );
+        setFade(true); // Start fade-in
+      }, 500); // Time for the fade-out effect
+    }, 5000); // Change image every 5 seconds
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("https://api.myvisapoint.com/api/contact/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
-
-      if (response.ok) {
-        setSuccess("Message sent successfully!");
-        setForm({ name: "", email: "", message: "" });
-        setError("");
-      } else {
-        throw new Error("Failed to send message");
-      }
-    } catch (err) {
-      setError("Failed to send message. Please try again.");
-      setSuccess("");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, [images.length]);
 
   return (
-    <section className="relative flex flex-col-reverse lg:flex-row items-center justify-center h-64 lg:min-h-screen">
-      {/* Video Background */}
-      <video
-        playsInline
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source
-          src={
-            isMobile
-              ? "https://ik.imagekit.io/7uve7qsipm/center.mp4?updatedAt=1726226140435"
-              : "https://ik.imagekit.io/7uve7qsipm/leftalign.mp4?updatedAt=1726226140465"
-          }
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-
+    <section
+      className={`relative flex flex-col lg:flex-row items-center justify-center min-h-[60vh] lg:min-h-screen bg-cover bg-center transition-all duration-1000 ease-in-out ${
+        fade ? "opacity-100" : "opacity-0"
+      }`}
+      style={{ backgroundImage: images[currentImage] }}
+    >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Text Section */}
-      <div className="relative z-10 w-full lg:w-1/2 text-center px-4 lg:px-10 py-8 lg:py-20 h-full">
-        {/* Add your content here */}
-        {isMobile ? (
-          <a
-            href="#contact"
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 focus:outline-none"
-          >
-            Contact
-          </a>
-        ) : null}
-      </div>
-
-      {/* Contact Form Section */}
-      <div className="relative z-10 w-full lg:w-1/3 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg shadow-2xl p-2 ml-32 md:p-6 opacity-90 transform transition-all hover:scale-105 hover:shadow-l mt-6 lg:mt-0  scale-up hidden lg:block">
-        <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold text-center text-white mb-4">
-          Get In Touch
-        </h4>
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          <div className="flex flex-col">
-            <label className="text-white font-semibold mb-1">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Your Name"
-              className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label className="text-white font-semibold mb-1">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Your Email"
-              className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
-              required
-            />
-          </div>
-          <div className="flex flex-col">
-            <label className="text-white font-semibold mb-1">Message</label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-          {success && <p className="text-green-500 text-center">{success}</p>}
-          {error && <p className="text-red-500 text-center">{error}</p>}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-blue-500 to-teal-400 text-white py-2 rounded-md font-semibold hover:bg-gradient-to-l hover:from-teal-400 hover:to-blue-500 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            {isSubmitting ? "Sending..." : "Send Message"}
-          </button>
-        </form>
+      <div className="relative z-10 w-full lg:w-2/3 text-center px-6 py-10 lg:px-16">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          Premier Immigration Services Consultancy!
+        </h1>
+        <p className="text-base md:text-lg lg:text-xl text-white mb-6 leading-relaxed">
+          As one of the most trusted and knowledgeable immigration consultants in Chandigarh, we're here to turn your dreams into reality with our expert guidance.
+        </p>
+        <a
+          href="#about"
+          className="inline-block bg-teal-600 text-white px-5 py-3 rounded-md font-medium hover:bg-teal-700 transition duration-300"
+        >
+          Discover More
+        </a>
       </div>
     </section>
   );

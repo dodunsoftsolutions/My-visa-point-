@@ -21,11 +21,13 @@ import UnitedKingdom from './Pages/UnitedKingdom';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
 import NewZealand from './Pages/NewZealand';
 import Schengen from './Pages/Schengen';
+import MessageButton from './Components/MessageButton';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <MessageButton/>
       <Navbar />
       <Sidebar/>
       <Routes>

@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const images = [
-    "url('https://th.bing.com/th?id=OIP.CSU0WYkZwY4keDZCuzMsfQHaE5&w=307&h=203&c=8&rs=1&qlt=90&o=6&cb=13&dpr=1.3&pid=3.1&rm=2')",
-    "url('https://th.bing.com/th?id=OIP.SYVOsT6OjixJKyYsY6vKlgHaE6&w=306&h=203&c=8&rs=1&qlt=90&o=6&cb=13&dpr=1.3&pid=3.1&rm=2')",
-    "url('https://th.bing.com/th?id=OIP.iwCxQJfnA3agx4xYkYGA3wHaE8&w=305&h=204&c=8&rs=1&qlt=90&o=6&cb=13&dpr=1.3&pid=3.1&rm=2')"
+    "url('https://ik.imagekit.io/devhm/6.png?updatedAt=1727460493711')",
+    "url('https://ik.imagekit.io/devhm/3.png?updatedAt=1727460493603')",
+    "url('https://ik.imagekit.io/devhm/WhatsApp%20Image%202024-09-27%20at%2011.07.22%20PM.jpeg?updatedAt=1727460492550')",
+    "url('https://ik.imagekit.io/devhm/WhatsApp%20Image%202024-09-27%20at%2011.08.05%20PM.jpeg?updatedAt=1727460492518')",
+    "url('https://ik.imagekit.io/devhm/WhatsApp%20Image%202024-09-27%20at%2011.07.47%20PM.jpeg?updatedAt=1727460492454')",
+    "url('https://ik.imagekit.io/devhm/WhatsApp%20Image%202024-09-27%20at%2011.07.07%20PM.jpeg?updatedAt=1727460492451')",
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -27,7 +30,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className={`relative flex flex-col lg:flex-row items-center justify-center min-h-[60vh] lg:min-h-screen bg-cover bg-center transition-all duration-1000 ease-in-out ${
+      className={`relative flex flex-col lg:flex-row items-start justify-center min-h-[60vh] lg:min-h-screen bg-cover bg-center transition-all duration-1000 ease-in-out ${
         fade ? "opacity-100" : "opacity-0"
       }`}
       style={{ backgroundImage: images[currentImage] }}
@@ -40,9 +43,6 @@ const HeroSection = () => {
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
           Premier Immigration Services Consultancy!
         </h1>
-        <p className="text-base md:text-lg lg:text-xl text-white mb-6 leading-relaxed">
-          As one of the most trusted and knowledgeable immigration consultants in Chandigarh, we're here to turn your dreams into reality with our expert guidance.
-        </p>
         <a
           href="#about"
           className="inline-block bg-teal-600 text-white px-5 py-3 rounded-md font-medium hover:bg-teal-700 transition duration-300"

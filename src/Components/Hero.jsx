@@ -30,7 +30,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className={`relative flex flex-col lg:flex-row items-start justify-center min-h-[60vh] lg:min-h-screen bg-cover bg-center transition-all duration-1000 ease-in-out ${
+      className={`relative flex flex-col lg:flex-row items-start justify-center min-h-[50vh] lg:min-h-[75vh] bg-cover bg-center transition-all duration-1000 ease-in-out ${
         fade ? "opacity-100" : "opacity-0"
       }`}
       style={{ backgroundImage: images[currentImage] }}
@@ -44,7 +44,7 @@ const HeroSection = () => {
           Premier Immigration Services Consultancy!
         </h1>
         <a
-          href="#about"
+          href="/about-us"
           className="inline-block bg-teal-600 text-white px-5 py-3 rounded-md font-medium hover:bg-teal-700 transition duration-300"
         >
           Discover More

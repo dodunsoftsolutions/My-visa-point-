@@ -4,183 +4,139 @@ import { Link, useLocation } from "react-router-dom";
 const Footer = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-  return (
-    <footer className="bg-teal-800 text-white py-8 shadow-lg bottom-0 left-0 w-full">
-      <div className="container mx-auto px-4 ">
-        <div className="flex flex-col md:flex-row justify-between">
-          {/* Company Information */}
-          <div className="mb-8 md:mb-0">
-            <h2 className="text-xl font-bold mb-2 text-white"></h2>
-            <p className="mb-2">My Visa Point</p>
-            <p className="mb-2">SCO-2433-34,2nd Floor,Sector 22C</p>
-            <p className="mb-2">Chandigarh ,160022</p>
-            <p className="mb-2">Phone: +91 8146880060</p>
-            <p>
-              Email:{" "}
-              <a
-                href="mailto:info@myvisapoint.org"
-                className="text-white hover:text-teal-400"
-              >
-                info@myvisapoint.org
-              </a>
-            </p>
-          </div>
 
-          {/* Useful Links */}
-          <div className="mb-8 md:mb-0">
-            <h3 className="text-lg font-semibold mb-2 text-white">
-              Useful Links
-            </h3>
+  return (
+    <footer className="bg-teal-800 text-white py-10 px-6">
+      {" "}
+      {/* Added padding on both left and right */}
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Section 1: About Description */}
+        <div>
+          <h3 className="text-lg font-bold mb-4 text-teal-400">About Us</h3>
+          <p className="mb-4">
+            At My Visa Point, we are more than just an immigration consultancy;
+            we are your steadfast companions on the journey to realizing your
+            global aspirations. With a commitment to excellence and a passion
+            for facilitating seamless transitions across borders, we specialize
+            in providing comprehensive visa services for the UK, Canada, New
+            Zealand, Australia, and the USA.
+          </p>
+          <p>
+            &copy; {new Date().getFullYear()} My Visa Point. All rights
+            reserved.
+          </p>
+        </div>
+
+        {/* Section 2: Our Services & Useful Links */}
+        <div>
+          <h3 className="text-lg font-bold mb-4 text-teal-400">Quick Links</h3>
+          <div className="grid grid-cols-2 gap-4">
+            <ul>
+              <li>
+                <Link to="/study-visa" className="hover:text-teal-400">
+                  Study Visa
+                </Link>
+              </li>
+              <li>
+                <Link to="/tourist-visa" className="hover:text-teal-400">
+                  Tourist Visa
+                </Link>
+              </li>
+              <li>
+                <Link to="/super-visa" className="hover:text-teal-400">
+                  Super Visa
+                </Link>
+              </li>
+              <li>
+                <Link to="/visa-Counselling" className="hover:text-teal-400">
+                  Visa Counselling
+                </Link>
+              </li>
+            </ul>
             <ul>
               <li>
                 {isHomePage ? (
-                  <a
-                    href="#hero"
-                    className="hover:text-teal-600 transition-colors"
-                  >
+                  <a href="#Home" className="hover:text-teal-400">
                     Home
                   </a>
                 ) : (
-                  <Link
-                    to="/#hero"
-                    className="hover:text-teal-600 transition-colors"
-                  >
+                  <Link to="/#Home" className="hover:text-teal-400">
                     Home
                   </Link>
                 )}
               </li>
               <li>
-                {isHomePage ? (
-                  <a
-                    href="#about"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    About
-                  </a>
-                ) : (
-                  <Link
-                    to="/#about"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    About
-                  </Link>
-                )}
+                <Link to="/about-us" className="hover:text-teal-400">
+                  About
+                </Link>
               </li>
               <li>
-                {isHomePage ? (
-                  <a
-                    href="#testimonials"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    Testimonials
-                  </a>
-                ) : (
-                  <Link
-                    to="/#testimonials"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    testimonials
-                  </Link>
-                )}
+                <Link to="/#testimonials" className="hover:text-teal-400">
+                  Testimonials
+                </Link>
               </li>
               <li>
-                {isHomePage ? (
-                  <a
-                    href="#contact"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    Contact
-                  </a>
-                ) : (
-                  <Link
-                    to="/#contact"
-                    className="hover:text-teal-600 transition-colors"
-                  >
-                    Contact
-                  </Link>
-                )}
-              </li>
-
-              <li>
-                <Link
-                  to="/privacy"
-                  className="text-white hover:text-teal-500 transition-colors"
-                >
+                <Link to="/privacy" className="hover:text-teal-400">
                   Privacy Policy
                 </Link>
               </li>
             </ul>
           </div>
+        </div>
 
-          {/* Our Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-2 text-white">
-              Our Services
-            </h3>
-            <ul>
-              <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/student-visa" className="relative group">
-                  Study Visa
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
-                </Link>
-              </li>
-              <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/tourist-visa" className="relative group">
-                  Tourist Visa
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
-                </Link>
-              </li>
-              <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/super-visa" className="relative group">
-                  Super Visa
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
-                </Link>
-              </li>
-              <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/visa-Counselling" className="relative group">
-                   Visa Counselling
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
-                </Link>
+        {/* Section 3: Map API */}
+        <div>
+          <h3 className="text-lg font-bold mb-4 text-teal-400">Our Location</h3>
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54874.27328534107!2d76.77103100000001!3d30.728461!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390feda86e949637%3A0xd325b6572506e281!2sMy%20Visa%20Point!5e0!3m2!1sen!2sin!4v1727634220970!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            frameBorder="0"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            tabIndex="0"
+          ></iframe>
+        </div>
 
-              </li>
-              <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/IeltsPte" className="relative group">
-                   IELTS/PTE
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
-                </Link>
-              </li>
-              <li className="text-white hover:text-gray-800 transition duration-300 transform hover:scale-105">
-                <Link to="/Interview" className="relative group">
-                   Interview Preparation
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-600 transition-all duration-500 group-hover:w-full"></span>
-                </Link>
-              </li>
-            </ul>
+        {/* Section 4: Contact Us */}
+        <div>
+          <h3 className="text-lg font-bold mb-4 text-teal-400">Contact Us</h3>
+          <p>SCO-2433-34, 2nd Floor, Sector 22C, Chandigarh, 160022</p>
+          <p>
+            Phone:
+            <a
+              href="tel:+917340761339
+"
+            >
+              +91 7340761339
+            </a>
+          </p>
+          <p>
+            Email:{" "}
+            <a href="mailto:info@myvisapoint.org">info@myvisapoint.org</a>
+          </p>
+
+          {/* Social Media Links */}
+          <div className="flex space-x-4 mt-4">
+            <a
+              href="https://wa.me/918146880060"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-green-500"
+            >
+              <i className="fab fa-whatsapp fa-lg"></i> {/* Clickable */}
+            </a>
+            <a
+              href="https://www.instagram.com/myvisapoint6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-pink-500"
+            >
+              <i className="fab fa-instagram fa-lg"></i> {/* Clickable */}
+            </a>
           </div>
-        </div>
-
-        {/* Social Media Links */}
-        <div className="flex justify-center space-x-4 mt-8">
-          <a
-            href="https://wa.me/8146880030"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-green-500"
-          >
-            <i className="fab fa-whatsapp fa-lg"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/myvisapoint6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-pink-500"
-          >
-            <i className="fab fa-instagram fa-lg"></i>
-          </a>
-        </div>
-
-        <div className="mt-8 text-center text-white text-sm">
-          &copy; {new Date().getFullYear()} Myvisapoint. All rights reserved.
         </div>
       </div>
     </footer>

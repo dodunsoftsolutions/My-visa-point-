@@ -22,6 +22,7 @@ import PrivacyPolicy from './Pages/PrivacyPolicy';
 import NewZealand from './Pages/NewZealand';
 import Schengen from './Pages/Schengen';
 import MessageButton from './Components/MessageButton';
+import ContactUs from './Components/Contact';
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
         <Route path="/NewZealand" element={<NewZealand/>}/>
         <Route path="/privacy" element={<PrivacyPolicy/>}/>
         <Route path="/schengen" element={<Schengen/>}/>
+        <Route path="/ContactUs" element={<ContactUs/>}/>
+        {/* <Route path="/AboutUS" element={<AboutUs/>}/> */}
       </Routes>
       <Footer />
     </Router>

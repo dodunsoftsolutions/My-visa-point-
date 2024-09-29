@@ -41,7 +41,8 @@ const Navbar = () => {
       <div className="bg-teal-800 text-gray-100 py-2 px-6 flex justify-between items-center text-sm hidden md:flex fixed top-0 w-full z-50">
         <div className="flex items-center space-x-4">
           <i className="fas fa-map-marker-alt"></i>
-          <span>SCO-2433-34, 2nd Floor, Sector 22C Chandigarh, 160022, <i class="fa-solid fa-phone"></i> 8146880060</span>
+          <span>SCO-2433-34, 2nd Floor, Sector 22C Chandigarh, 160022, <i class="fa-solid fa-phone"></i> 7340761339
+</span>
         </div>
         <div className="flex space-x-4">
           <a
@@ -94,20 +95,20 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6"  ref={dropdownRef}>
           {isHomePage ? (
-              <a href="#hero" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
+              <a href="#Home" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 Home
               </a>
             ) : (
-              <Link to="/#hero" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
+              <Link to="/#Home" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 Home
               </Link>
             )}
             {isHomePage ? (
-              <a href="#about" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
+              <a href="/about-us" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 About
               </a>
             ) : (
-              <Link to="/#about" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
+              <Link to="/about-us" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 About
               </Link>
             )}
@@ -197,11 +198,11 @@ const Navbar = () => {
               </Link>
             )}
             {isHomePage ? (
-              <a href="#contact" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
+              <a href="/ContactUs" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 Contact
               </a>
             ) : (
-              <Link to="/#contact" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
+              <Link to="/ContactUs" className="hover:text-teal-600 transition-colors"  onClick={() => setIsDropdownOpen(false)}>
                 Contact
               </Link>
             )}
@@ -239,7 +240,7 @@ const Navbar = () => {
           </Link>
           {isHomePage ? (
             <a
-              href="#about"
+              href="/about-us"
               className="block px-4 py-3 hover:bg-teal-100 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -247,7 +248,7 @@ const Navbar = () => {
             </a>
           ) : (
             <Link
-              to="/#about"
+              to="/about-us"
               className="block px-4 py-3 hover:bg-teal-100 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -290,7 +291,7 @@ const Navbar = () => {
           )}
           {isHomePage ? (
             <a
-              href="#contact"
+              href="/ContactUs"
               className="block px-4 py-3 hover:bg-teal-100 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -298,7 +299,7 @@ const Navbar = () => {
             </a>
           ) : (
             <Link
-              to="/#contact"
+              to="/ContactUs"
               className="block px-4 py-3 hover:bg-teal-100 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >

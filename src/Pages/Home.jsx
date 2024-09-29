@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div>
       {/* Assign unique ids for internal navigation */}
-      <section id="hero">
+      <section id="Home">
         <HeroSection />
       </section>
       <section id="about">

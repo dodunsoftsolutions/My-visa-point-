@@ -16,7 +16,8 @@ const Sidebar = () => {
         
         {/* WhatsApp */}
         <div className='group'>
-            <Link to="https://wa.me/8146880060" target="_blank">
+            <Link to="https://wa.me/918146880060
+" target="_blank">
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[#25D366] shadow-sm group-hover:shadow-md transition-shadow duration-300">
                     <i className="fa-brands fa-whatsapp fa-lg text-white"></i>
                 </div>

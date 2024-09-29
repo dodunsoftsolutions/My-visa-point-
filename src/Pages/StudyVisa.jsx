@@ -10,6 +10,9 @@ const StudyVisa = () => {
   });
   const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true });
   const { ref: ctaRef, inView: ctaInView } = useInView({ triggerOnce: true });
+  const { ref: contactRef, inView: contactInView } = useInView({
+    triggerOnce: true,
+  });
 
   return (
     <section className="bg-gray-100 py-16 px-8">
@@ -107,12 +110,46 @@ const StudyVisa = () => {
         }`}
       >
         <a
-          href="/#contact"
+          href="/ContactUs"
           className="px-8 py-4 bg-teal-600 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-teal-700 transition-colors duration-300"
         >
-          {" "}
-        Get Our Support
+          Get Our Support
         </a>
+      </div>
+
+      {/* Contact Information */}
+      <div
+        ref={contactRef}
+        className={`mt-16 text-center p-8 bg-teal-600 text-white rounded-lg shadow-lg transition-all duration-500 ${
+          contactInView ? "fade-in" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <h3 className="text-3xl font-bold mb-4">Contact Us</h3>
+        <p className="text-lg mb-2">
+          <strong>Address:</strong>{" "}
+          <a
+            href="https://www.google.com/maps/place/SCO-2433-34,+Sector+22C,+Chandigarh,+160022"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            SCO-2433-34, 2nd Floor, Sector 22C, Chandigarh, 160022
+          </a>
+        </p>
+        <p className="text-lg mb-2">
+          <strong>Phone:</strong>{" "}
+          <a href="tel:+917340761339
+" className="underline">
+            +91 7340761339
+
+          </a>
+        </p>
+        <p className="text-lg">
+          <strong>Email:</strong>{" "}
+          <a href="mailto:info@myvisapoint.org" className="underline">
+            info@myvisapoint.org
+          </a>
+        </p>
       </div>
     </section>
   );

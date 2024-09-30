@@ -20,7 +20,7 @@ const Home = () => {
       <section id="about">
         <About />
       </section>
-      <section id="categories">
+      <section id="services">
         <Categories />
       </section>
       <section id="countries">

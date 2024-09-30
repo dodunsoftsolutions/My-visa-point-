@@ -257,7 +257,7 @@ const Navbar = () => {
           )}
            {isHomePage ? (
             <a
-              href="#categories"
+              href="#services"
               className="block px-4 py-3 hover:bg-teal-100 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -265,7 +265,7 @@ const Navbar = () => {
             </a>
           ) : (
             <Link
-              to="/#categories"
+              to="/#services"
               className="block px-4 py-3 hover:bg-teal-100 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >

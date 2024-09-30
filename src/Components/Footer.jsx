@@ -29,8 +29,8 @@ const Footer = () => {
 
         {/* Section 2: Our Services & Useful Links */}
         <div>
-          <h3 className="text-lg font-bold mb-4 text-teal-400">Quick Links</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <h3 className="text-lg font-bold mb-6 text-teal-400">Services</h3>
+          <div className="grid grid-cols-3 gap-4">
             <ul>
               <li>
                 <Link to="/study-visa" className="hover:text-teal-400">
@@ -52,8 +52,24 @@ const Footer = () => {
                   Visa Counselling
                 </Link>
               </li>
+              <li>
+                <Link to="/IeltsPte" className="hover:text-teal-400">
+                  IELTS PTE
+                </Link>
+              </li>
+              <li>
+                <Link to="/Interview" className="hover:text-teal-400">
+                  Interview Preparation
+                </Link>
+              </li>
+              
+              <li>
+                <Link to="/privacy" className="hover:text-teal-400">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
-            <ul>
+            {/* <ul>
               <li>
                 {isHomePage ? (
                   <a href="#Home" className="hover:text-teal-400">
@@ -80,7 +96,7 @@ const Footer = () => {
                   Privacy Policy
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
 

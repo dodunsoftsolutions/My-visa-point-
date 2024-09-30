@@ -5,7 +5,7 @@ const InterviewPreparation = () => {
     <section className="bg-gray-100 py-16 px-8">
       {/* Heading for the Interview Preparation Section */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-teal-600">Interview Preparation</h2>
+        <h1 className="text-4xl font-bold text-teal-600">Interview Preparation</h1>
       </div>
 
       {/* First Section: Image on Left, Content on Right */}

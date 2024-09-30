@@ -18,6 +18,7 @@ const InterviewPreparation = () => {
           />
         </div>
         <div className="lg:w-1/2 lg:pl-8">
+        <p  className="text-2xl text-black mb-6"> Crack Your Visa Interview In The First  Attempt with My Visapoint!</p>
           <p className="text-lg text-gray-700 mb-6">
             Preparing for a visa interview requires thorough preparation to ensure that you meet the requirements and present yourself effectively. Visa interviews are typically conducted by consular officers to assess your eligibility and intentions for traveling to their country.
           </p>

@@ -62,7 +62,7 @@ const Categories = () => {
     {
       title: 'Visa Counselling',
       description:
-        'Expand your business horizons with our Business Visa service. We facilitate smooth entry for business activities and meetings.',
+        'Our visa counseling services provide comprehensive guidance and personalized support to help you navigate the complex visa process with easemaking your visa journey smooth and stress-free..',
       imgSrc:
         'https://ik.imagekit.io/6oa6qejxe/vasily-koloda-8CqDvPuo_kI-unsplash.jpg?updatedAt=1725534709195',
       link: '/visa-Counselling',
@@ -78,14 +78,14 @@ const Categories = () => {
     {
       title: 'Super Visa',
       description:
-        'Reunite with your partner quickly and easily. Our Spouse Visa service handles the complexities of immigration for you.',
+        'Reunite with your  family quickly and easily. Our Super Visa service handles the complexities of immigration for you.',
       imgSrc: 'https://ik.imagekit.io/6oa6qejxe/2149205286.jpg?updatedAt=1725540062974',
       link: '/super-visa',
     },
     {
       title: 'Interview Preparation',
       description:
-        'Ace your job interviews with our comprehensive preparation services. We offer mock interviews, feedback, and coaching to enhance your confidence and performance.',
+        'Ace your visa interviews with our comprehensive preparation services. We offer mock interviews, feedback, and coaching to enhance your confidence and performance.',
       imgSrc: 'https://ik.imagekit.io/tdlebsr5e/16263.jpg?updatedAt=1726576083221', // Replace with appropriate image URL
       link: '/Interview',
     },

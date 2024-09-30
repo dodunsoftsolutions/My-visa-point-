@@ -30,7 +30,7 @@ const VisaCounselling = () => {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 lg:pr-8">
           <div className="bg-white p-8 rounded-lg shadow-lg mb-8 lg:mb-0">
-            <h6 className="text-2xl font-semibold text-teal-500 mb-4">Services Offered by Visa Counselors</h6>
+            <h6 className="text-2xl font-semibold text-teal-500 mb-4">Services Offered by Our Visa Counselors</h6>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Determine Eligibility: Counselors assess whether you meet the requirements for the visa you are applying for, based on your background, purpose of travel, and other factors.</li>
               <li>Document Review: Review documents to ensure they meet the visa requirements and are correctly formatted.</li>

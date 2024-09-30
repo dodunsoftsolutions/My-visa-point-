@@ -36,7 +36,7 @@ const HeroSection = () => {
       style={{ backgroundImage: images[currentImage] }}
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
 
       {/* Text Section */}
       <div className="relative z-10 w-full lg:w-2/3 text-center px-6 py-10 lg:px-16">

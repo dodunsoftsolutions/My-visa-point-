@@ -7,10 +7,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-teal-800 text-white py-10 px-6">
-      {" "}
-      {/* Added padding on both left and right */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Section 1: About Description */}
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        {/* Section 1: About Us */}
         <div>
           <h3 className="text-lg font-bold mb-4 text-teal-400">About Us</h3>
           <p className="mb-4">
@@ -21,86 +19,52 @@ const Footer = () => {
             in providing comprehensive visa services for the UK, Canada, New
             Zealand, Australia, and the USA.
           </p>
-          <p>
-            &copy; {new Date().getFullYear()} My Visa Point. All rights
-            reserved.
-          </p>
+          <p>&copy; {new Date().getFullYear()} My Visa Point. All rights reserved.</p>
         </div>
 
-        {/* Section 2: Our Services & Useful Links */}
-        <div>
-          <h3 className="text-lg font-bold mb-6 text-teal-400">Services</h3>
-          <div className="grid grid-cols-3 gap-4">
-            <ul>
-              <li>
-                <Link to="/study-visa" className="hover:text-teal-400">
-                  Study Visa
-                </Link>
-              </li>
-              <li>
-                <Link to="/tourist-visa" className="hover:text-teal-400">
-                  Tourist Visa
-                </Link>
-              </li>
-              <li>
-                <Link to="/super-visa" className="hover:text-teal-400">
-                  Super Visa
-                </Link>
-              </li>
-              <li>
-                <Link to="/visa-Counselling" className="hover:text-teal-400">
-                  Visa Counselling
-                </Link>
-              </li>
-              <li>
-                <Link to="/IeltsPte" className="hover:text-teal-400">
-                  IELTS PTE
-                </Link>
-              </li>
-              <li>
-                <Link to="/Interview" className="hover:text-teal-400">
-                  Interview Preparation
-                </Link>
-              </li>
-              
-              <li>
-                <Link to="/privacy" className="hover:text-teal-400">
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul>
-            {/* <ul>
-              <li>
-                {isHomePage ? (
-                  <a href="#Home" className="hover:text-teal-400">
-                    Home
-                  </a>
-                ) : (
-                  <Link to="/#Home" className="hover:text-teal-400">
-                    Home
-                  </Link>
-                )}
-              </li>
-              <li>
-                <Link to="/about-us" className="hover:text-teal-400">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/#testimonials" className="hover:text-teal-400">
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="hover:text-teal-400">
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul> */}
-          </div>
+        {/* Section 2: Services with Further Reduced Width */}
+        <div className="md:col-span-1 w-2/3 mx-auto"> {/* Further reduced width */}
+          <h3 className="text-lg font-bold mb-4 text-teal-400">Our Services</h3>
+          <ul className="space-y-2">
+            <li>
+              <Link to="/study-visa" className="hover:text-teal-400">
+                Study Visa
+              </Link>
+            </li>
+            <li>
+              <Link to="/tourist-visa" className="hover:text-teal-400">
+                Tourist Visa
+              </Link>
+            </li>
+            <li>
+              <Link to="/super-visa" className="hover:text-teal-400">
+                Super Visa
+              </Link>
+            </li>
+            <li>
+              <Link to="/visa-Counselling" className="hover:text-teal-400">
+                Visa Counselling
+              </Link>
+            </li>
+            <li>
+              <Link to="/IeltsPte" className="hover:text-teal-400">
+                IELTS PTE
+              </Link>
+            </li>
+            <li>
+              <Link to="/Interview" className="hover:text-teal-400">
+                Interview Preparation
+              </Link>
+            </li>
+            <li>
+              <Link to="/privacy" className="hover:text-teal-400">
+                Privacy Policy
+              </Link>
+            </li>
+          </ul>
         </div>
 
-        {/* Section 3: Map API */}
+        {/* Section 3: Location (Google Map) */}
         <div>
           <h3 className="text-lg font-bold mb-4 text-teal-400">Our Location</h3>
           <iframe
@@ -116,22 +80,21 @@ const Footer = () => {
           ></iframe>
         </div>
 
-        {/* Section 4: Contact Us */}
+        {/* Section 4: Contact Us & Social Media */}
         <div>
           <h3 className="text-lg font-bold mb-4 text-teal-400">Contact Us</h3>
           <p>SCO-2433-34, 2nd Floor, Sector 22C, Chandigarh, 160022</p>
           <p>
-            Phone:
-            <a
-              href="tel:+917340761339
-"
-            >
+            Phone:{" "}
+            <a href="tel:+917340761339" className="hover:text-teal-400">
               +91 7340761339
             </a>
           </p>
           <p>
             Email:{" "}
-            <a href="mailto:info@myvisapoint.org">info@myvisapoint.org</a>
+            <a href="mailto:info@myvisapoint.org" className="hover:text-teal-400">
+              info@myvisapoint.org
+            </a>
           </p>
 
           {/* Social Media Links */}
@@ -142,7 +105,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-green-500"
             >
-              <i className="fab fa-whatsapp fa-lg"></i> {/* Clickable */}
+              <i className="fab fa-whatsapp fa-lg"></i>
             </a>
             <a
               href="https://www.instagram.com/myvisapoint6"
@@ -150,7 +113,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-pink-500"
             >
-              <i className="fab fa-instagram fa-lg"></i> {/* Clickable */}
+              <i className="fab fa-instagram fa-lg"></i>
             </a>
           </div>
         </div>

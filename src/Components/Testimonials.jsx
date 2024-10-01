@@ -74,7 +74,7 @@ const Testimonials = () => {
       <div className="relative z-10 max-w-6xl mx-auto text-center px-4">
         <p className="text-lg font-semibold text-white mb-4">What Our Clients Say</p>
         <h4 className="text-3xl md:text-4xl text-white font-extrabold mb-10">
-          Hear From Our Satisfied Clients
+        Testimonials from Our Happy Clients!
         </h4>
         <Slider {...settings}>
           {/* Step 1 */}

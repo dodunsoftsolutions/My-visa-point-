@@ -47,7 +47,7 @@ const HeroSection = () => {
           href="/about-us"
           className="inline-block bg-teal-600 text-white px-5 py-3 rounded-md font-medium hover:bg-teal-700 transition duration-300"
         >
-          Discover More
+          Read More
         </a>
       </div>
     </section>

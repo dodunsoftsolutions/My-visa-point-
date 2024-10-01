@@ -53,7 +53,7 @@ const ContactUs = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between bg-black bg-opacity-70 rounded-lg p-8">
         {/* Left Side: Content */}
         <div className="md:w-full text-white p-6">
-          <p className="text-lg font-semibold mb-2">Contact Us</p>
+          {/* <p className="text-lg font-semibold mb-2">Contact Us</p> */}
           <h4 className="text-4xl font-extrabold mb-6">Contact us for Visa & Immigration</h4>
           <p className="mb-6">
             Reach out to us for any inquiries regarding visa and immigration services. We are here to assist you with

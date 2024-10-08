@@ -58,8 +58,8 @@ const ApprovedVisas = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-12">
-      <div className="max-w-full mx-auto px-4">
+    <div className="bg-gray-100 py-12 overflow-x-hidden"> {/* Prevent horizontal scroll */}
+      <div className="w-full mx-auto px-4"> {/* Ensure full width without overflow */}
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">Approved Visas</h2>
         <Slider {...settings}>
           {slides.map((slide, index) => (
@@ -69,8 +69,8 @@ const ApprovedVisas = () => {
                 alt={slide.heading}
                 className="w-full h-auto object-center rounded-lg shadow-lg mb-4" 
               />
-              <div className="absolute inset-0  rounded-lg flex flex-col justify-center items-center text-white p-4">
-              
+              <div className="absolute inset-0 rounded-lg flex flex-col justify-center items-center text-white p-4">
+                {/* Content for each slide can go here */}
               </div>
             </div>
           ))}

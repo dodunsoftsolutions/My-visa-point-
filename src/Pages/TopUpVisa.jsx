@@ -13,7 +13,7 @@ const TopUpVisa = () => {
           />
         </div>
         <div className="lg:w-1/2 lg:pl-8">
-          <h5 className="text-4xl font-bold text-teal-600 mb-4">Top-Up Visa</h5>
+          <h1 className="text-4xl font-bold text-teal-600 mb-4">Top-Up Visa</h1>
           <p className="text-lg text-gray-700 mb-6">
             A Top-Up Degree is equivalent to a final year undergraduate degree. Suppose you already have a Level 5 education (graduated), you can opt for a Top-Up Degree and gain admission to the final year, which means that as a student, you can complete Level 6 of education in 1 year compared to the standard 3 years.
           </p>

@@ -5,7 +5,7 @@ const SpouseVisa = () => {
     <section className="bg-gray-100 py-16 px-8">
       {/* Header Section */}
       <div className="text-center mb-12">
-        <h5 className="text-4xl font-bold text-teal-600">Spouse Visa</h5>
+        <h1 className=" font-bold text-teal-600">Spouse Visa</h1>
       </div>
 
       {/* First Section: Image on Left, Content on Right */}

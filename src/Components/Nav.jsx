@@ -41,7 +41,8 @@ const Navbar = () => {
       <div className="bg-teal-800 text-gray-100 py-2 px-6 flex justify-between items-center text-sm hidden md:flex fixed top-0 w-full z-50">
         <div className="flex items-center space-x-4">
           <i className="fas fa-map-marker-alt"></i>
-          <span>SCO-2433-34, 2nd Floor, Sector 22C Chandigarh, 160022, <i class="fa-solid fa-phone"></i> 7340761339
+          <span>SCO-2433-34, 2nd Floor, Sector 22C Chandigarh, 160022, <i class="fa-solid fa-phone"></i> 
+          <a href="tel:7340761339">7340761339</a>
 </span>
         </div>
         <div className="flex space-x-4">

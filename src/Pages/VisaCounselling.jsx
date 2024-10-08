@@ -13,7 +13,7 @@ const VisaCounselling = () => {
           />
         </div>
         <div className="lg:w-1/2 lg:pl-8">
-          <h5 className="text-4xl font-bold text-teal-600 mb-4">What is Visa Counseling?</h5>
+          <h1 className="text-4xl font-bold text-teal-600 mb-4">What is Visa Counseling?</h1>
           <p className="text-lg text-gray-700 mb-6">
           Visa counseling is a service provided to assist individuals in navigating the complex process of applying for visas. This service can be crucial for ensuring that your visa application is completed accurately and efficiently. 
           </p>

@@ -146,7 +146,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Information */}
-      <div
+      {/* <div
         ref={contactRef}
         className={`mt-16 text-center p-8 bg-teal-600 text-white rounded-lg shadow-lg transition-all duration-500 ${
           contactInView ? "fade-in" : "opacity-0 translate-y-10"
@@ -178,7 +178,7 @@ const ContactUs = () => {
             info@myvisapoint.org
           </a>
         </p>
-      </div>
+      </div> */}
     </section>
   );
 };

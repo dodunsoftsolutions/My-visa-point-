@@ -44,7 +44,11 @@ const Home = () => {
                 <title>Top Immigration Consultants in Chandigarh | My Visa Point</title>
                 <meta name="description" content="Looking for the best immigration consultants in Chandigarh? My Visa Point offers expert guidance and support for all your visa needs. Contact us today!" />
                 <link rel="canonical" href="https://myvisapoint.com" />
+
+                
+
             </Helmet>
+            
    
     </div>
   );

@@ -120,6 +120,14 @@ const Canada = () => {
           </div>
         </section>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title> Canada Visa Services in Chandigarh | My Visa Point</title>
+                <meta name="description" content=" Apply for a Canada visa with expert help from My Visa Point in Chandigarh. Get personalized support and guidance for a smooth application process. Contact us!
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/canada" />
+            </Helmet>
     </div>
   );
 }

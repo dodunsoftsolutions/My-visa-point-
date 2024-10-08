@@ -109,6 +109,14 @@ const Australia = () => {
           </div>
         </section>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title> Australia Visa Consultants in Chandigarh | My Visa Point</title>
+                <meta name="description" content=" Apply for an Australia visa with expert assistance from Visa Point in Chandigarh. Get personalized support for a seamless application process. Contact us today!
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/australia" />
+            </Helmet>
     </div>
   );
 };

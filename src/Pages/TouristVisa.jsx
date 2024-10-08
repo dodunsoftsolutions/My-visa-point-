@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 const TouristVisa = () => {
   return (
@@ -86,6 +87,14 @@ const TouristVisa = () => {
           Whether you're planning to visit the <strong>USA</strong> to see the Grand Canyon, explore the historical sites of <strong>Italy</strong>, or relax on the beaches of <strong>Australia</strong>, obtaining a tourist visa is your gateway to international adventures.
         </p>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Tourist Visa Services in Chandigarh | My Visa Point</title>
+                <meta name="description" content=" Looking for a tourist visa? My Visa Point in Chandigarh offers expert assistance for hassle-free applications. Plan your dream vacation with us today!
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/tourist-visa" />
+            </Helmet>
     </section>
   );
 };

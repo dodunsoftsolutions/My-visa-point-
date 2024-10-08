@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 const VisaCounselling = () => {
   return (
@@ -50,6 +51,15 @@ const VisaCounselling = () => {
           />
         </div>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>best visa consultants in chandigarh</title>
+                <meta name="description" content="Get expert visa counseling from the best consultants in Chandigarh. My Visa Point offers personalized guidance for all your visa application needs. Contact us!
+
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/visa-Counselling" />
+            </Helmet>
     </section>
   );
 };

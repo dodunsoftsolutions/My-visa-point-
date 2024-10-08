@@ -1,7 +1,9 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 const SuperVisa = () => {
   return (
+    
     <section className="bg-gray-100 py-16 px-8">
       {/* Header Section */}
       <div className="text-center mb-12">
@@ -49,7 +51,15 @@ The Super Visa is a program offered by Canada and is available to eligible paren
           />
         </div>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Super Visa Services in Chandigarh | My Visa Point</title>
+                <meta name="description" content=" Explore our Super Visa services in Chandigarh. Get expert assistance with applications and requirements to reunite with family in Canada,USA,UK,Australia,New Zealand,Schengen. Contact us today!
+" />
+                <link rel="canonical" href="https://myvisapoint.com/super-visa" />
+            </Helmet>
     </section>
+
   );
 };
 

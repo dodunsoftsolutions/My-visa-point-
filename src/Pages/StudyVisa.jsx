@@ -1,5 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import {Helmet} from "react-helmet";
 
 const StudyVisa = () => {
   const { ref: headerRef, inView: headerInView } = useInView({
@@ -140,6 +141,16 @@ const StudyVisa = () => {
           </a>
         </p>
       </div> */}
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>best study visa consultants in chandigarh,study visa consultants in chandigarh</title>
+                <meta name="description" content=" Looking for  study visa consultants in Chandigarh? Visa Point provides expert guidance for your study abroad journey. Start your application today!
+ 
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/study-visa" />
+            </Helmet>
+
     </section>
   );
 };

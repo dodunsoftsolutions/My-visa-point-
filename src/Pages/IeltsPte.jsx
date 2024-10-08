@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 const IeltsPte = () => {
   return (
@@ -58,7 +59,13 @@ const IeltsPte = () => {
           />
         </div>
       </div>
-
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>IELTS & PTE Coaching in Chandigarh | My Visa Point</title>
+                <meta name="description" content=" IELTS and PTE exams with expert coaching at My Visa Point, Chandigarh. Join us for tailored classes and achieve your study abroad goals today!
+" />
+                <link rel="canonical" href="https://myvisapoint.com/IeltsPte" />
+            </Helmet>
       
       
     </section>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 const NewZealand = () => {
   return (
@@ -116,6 +117,14 @@ const NewZealand = () => {
           </div>
         </section>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>New Zealand Visa Consultants in Chandigarh | My Visa Point</title>
+                <meta name="description" content=" Looking to apply for a New Zealand visa? My Visa Point in Chandigarh offers expert guidance and support for a smooth application process. Contact us today!
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/newzealand" />
+            </Helmet>
     </div>
   );
 }

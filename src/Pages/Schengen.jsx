@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 const Schengen = () => {
   return (
@@ -117,6 +118,14 @@ const Schengen = () => {
           </div>
         </section>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Schengen Visa Consultants in Chandigarh | My Visa Point</title>
+                <meta name="description" content=" Apply for a Schengen visa with expert guidance from My Visa Point in Chandigarh. Enjoy personalized support for your travel plans to Europe. Contact us today!
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/schengen" />
+            </Helmet>
     </div>
   );
 };

@@ -9,6 +9,7 @@ import Testimonials from '../Components/Testimonials';
 import StatsSection from '../Components/StatsSection';
 import UniversitySection from '../Components/UniversitySection';
 import ApprovedVisas from '../Components/ApprovedVisas';
+import {Helmet} from "react-helmet";
 
 const Home = () => {
   return (
@@ -38,6 +39,12 @@ const Home = () => {
       <ApprovedVisas/>
       <StatsSection/>
       <UniversitySection/>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Top Immigration Consultants in Chandigarh | My Visa Point</title>
+                <meta name="description" content="Looking for the best immigration consultants in Chandigarh? My Visa Point offers expert guidance and support for all your visa needs. Contact us today!" />
+                <link rel="canonical" href="https://myvisapoint.com" />
+            </Helmet>
    
     </div>
   );

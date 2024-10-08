@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 const Uk = () => {
   return (
@@ -144,6 +145,16 @@ const Uk = () => {
 
         </section>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>uk visa consultants in chandigarh</title>
+                <meta name="description" content="Looking for UK visa consultants in Chandigarh? My Visa Point provides expert guidance and support for all UK visa applications. Start your journey today!
+
+
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/uk" />
+            </Helmet>
     </div>
   );
 };

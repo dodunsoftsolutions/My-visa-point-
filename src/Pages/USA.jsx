@@ -1,5 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import {Helmet} from "react-helmet";
 
 const USA = () => {
   const { ref: headerRef, inView: headerInView } = useInView({
@@ -110,6 +111,16 @@ const USA = () => {
           </div>
         </section>
       </div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>USA Visa Services in Chandigarh | My Visa Point</title>
+                <meta name="description" content="Looking to apply for a USA visa? My Visa Point in Chandigarh offers expert guidance and support for all types of USA visa applications. Start your journey today! 
+
+
+
+" />
+                <link rel="canonical" href="https://myvisapoint.com/usa" />
+            </Helmet>
     </div>
   );
 };
